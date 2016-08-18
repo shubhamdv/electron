@@ -7,20 +7,9 @@ var _templateBase = './templates';
 
 var app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngMaterial']);
 
-var index = require('./modules/index');
+var index = require('../app/index');
 
 app.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {
-    templateUrl: _templateBase + '/index.html',
-    controller: 'indexController',
-  });
-
-  $routeProvider.when('/chat', {
-    templateUrl: _templateBase + '/chat.html',
-    controller: 'chatCtrl',
-    controllerAs: 'vm',
-  });
-
-  $routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.otherwise({ redirectTo: '/home' });
 
 }]);

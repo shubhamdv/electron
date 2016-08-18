@@ -2,7 +2,7 @@
   "name": "delhivery",
   "productName": "Delhivery",
   "identifier": "com.example.electron-boilerplate",
-  "description": "Starter for your Electron application. Out of the box ready for serious stuff.",
+  "description": "Chat application",
   "version": "0.1.0",
   "author": "Shubham Lakhiwal",
   "main": "background.js",
