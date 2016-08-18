@@ -63,7 +63,7 @@
         </li>
       </ul>
       <div class="write-form">
-        <textarea placeholder="Type your message" name="e" id="texxt" rows="2"></textarea>
+        <textarea placeholder="Type your message" ng-keydown="vm.typing( $event )" ng-model="vm.typedMsg" name="e" id="texxt" rows="2"></textarea>
         <i class="fa fa-picture-o"></i>
         <i class="fa fa-file-o"></i>
         <span class="send">Send</span>

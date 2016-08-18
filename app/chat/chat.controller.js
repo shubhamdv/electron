@@ -10,6 +10,7 @@
 	function ChatCtrl( $scope ) {
 		var vm = this;
 
+		vm.typedMsg = '';
 		vm.chat = {
 			friend: {
 				status: 'online',
@@ -61,6 +62,26 @@
 					timstamp: '10:13 AM, Today'
 				}
 			]
+		}
+
+		vm.typing = typing;
+
+		/////////////////////
+
+		function typing( event ) {
+			if( event.which === 13 && !event.shiftKey && vm.typedMsg.length ) {
+				sendMessage();
+			}
+		}
+
+		function sendMessage() {
+			vm.chat.messages.push({
+				msg: vm.typedMsg,
+				is_friend: false,
+				timstamp: '10:13 AM, Today'
+			});
+
+			vm.typedMsg = '';
 		}
 	}
 })();
